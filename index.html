@@ -57,10 +57,10 @@ h1{font-size:clamp(1.6rem,5vw,2.4rem);line-height:1.1;font-weight:700}
 .ch .ar{color:var(--blue)}
 /* tiles */
 .tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.tile{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;color:var(--navy);display:flex;flex-direction:column;gap:10px;min-height:96px;box-shadow:var(--shadow)}
+.tile{background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:8px 12px;color:var(--navy);display:flex;align-items:center;gap:12px;min-height:56px;box-shadow:var(--shadow)}
 .tile:hover{border-color:var(--blue);color:var(--navy)}
-.tile .ic{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;background:var(--navy);color:var(--accent)}
-.tile b{font-size:15px;line-height:1.25}.tile .ic.bot{background:#fff;border:1px solid var(--border)}.tile .ic.bot img{width:26px;height:26px;object-fit:contain}
+.tile .ic{width:40px;height:40px;flex:none;border-radius:9px;display:flex;align-items:center;justify-content:center;background:var(--navy);color:var(--accent)}
+.tile b{font-size:15px;line-height:1.25}.tile .ic.bot{background:#fff;border:1px solid var(--border)}.tile .ic.bot img{width:28px;height:28px;object-fit:contain}
 .tile small{display:block;color:var(--muted);font-size:12.5px;font-weight:500}
 /* chapter view */
 .back{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:14px;min-height:44px;margin:-8px 0 4px}
@@ -191,8 +191,8 @@ home(){let l=null;try{l=JSON.parse(localStorage.getItem('dcg-last'))}catch(_){}
 return `<section class="hello"><h1>DCG 29 <span>Toolbox</span></h1>${l?`<a class="resume" href="${l.h}"><span class="g"><small>Reprendre</small><b>${l.t}</b></span>${ic('play',20,2.4)}</a>`:''}</section>
 ${block('progression','Progression','1 fiche',PR)}${block('methodo','Méthodologie','1 outil',ME)}${block('vocabulaire','Vocabulaire','3 fiches',VO)}
 <div class="sec"><h2>Aussi</h2></div><div class="tiles">
-<a class="tile" href="#culture"><span class="ic">${ic('globe')}</span><b>General Knowledge<small>Vidéo, podcast et articles</small></b></a>
-<a class="tile" href="https://1cours1bot.fr" target="_blank" rel="noopener"><span class="ic bot"><img src="assets/1cours1bot-logo.png" alt=""></span><b>1cours1bot<small>Externe ↗</small></b></a></div>`},
+<a class="tile" href="#culture"><span class="ic">${ic('globe')}</span><b>General Knowledge</b></a>
+<a class="tile" href="https://1cours1bot.fr" target="_blank" rel="noopener"><span class="ic bot"><img src="assets/1cours1bot-logo.png" alt=""></span><b>1cours1bot</b></a></div>`},
 progression(){return `<h1>Progression</h1><p class="lead">Suivi du programme 2029, mis à jour au fil des cours.</p><div class="res" style="margin-top:16px">${PR.map(row).join('')}</div>`},
 methodo(){return `<h1>Méthodologie</h1><p class="lead">L'entraînement guidé à la synthèse de documents (UE 12).</p><div class="res" style="margin-top:16px">${ME.map(row).join('')}</div>`},
 vocabulaire(){return `<h1>Vocabulaire</h1><p class="lead">Flashcards, QCM en contexte et phrases à compléter.</p><div class="res" style="margin-top:16px">${VO.map(row).join('')}</div>`},

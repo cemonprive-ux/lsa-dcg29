@@ -171,8 +171,9 @@ const VO=[
 {k:'voc',t:'Chapitre 3 · Corporate Culture and Working Conditions',d:"Vocabulaire de la culture d'entreprise et des conditions de travail : flashcards, QCM en contexte et phrases à compléter.",h:'vocabulaire-corporate-culture-dcg-ch3.html'},
 {k:'voc',t:'Link words',d:'Les mots de liaison pour structurer un discours : flashcards, QCM en contexte et phrases à compléter.',h:'link-words-vocabulaire-dcg.html'},
 {k:'bot',t:'Chiffres et nombres',d:"Chiffres, nombres, dates, unités de mesures, etc. : assistant CHIFFRES ET NOMBRES sur 1cours1bot.",h:'https://www.1cours1bot.fr',x:1}];
-/* Rubrique Tests : à alimenter. Format : {k:'test',t:'Titre',d:'Description',h:'page.html'} */
-const TE=[];
+/* Rubrique Tests : à alimenter. Format : {k:'test',t:'Titre',d:'Description',h:'page.html',from:'2026-11-06T08:45:00+01:00'} ; « from » (facultatif) = date d'apparition. */
+const TE=[
+{k:'test',t:'Fast Food Workers on Strike',d:"Compréhension orale (B2), vendredi 6 novembre de 9 h à 10 h. Le code d'accès est donné en classe.",h:'https://dcg-co-fast-food.cemonprive.workers.dev',from:'2026-11-06T08:45:00+01:00'}].filter(x=>!x.from||Date.now()>=Date.parse(x.from));
 const GK=[
 {g:'Vidéos',k:'vid',t:'GB vs UK',h:'general-knowledge-dcg.html'},
 {g:'Podcasts',k:'pod',t:'Fifty States',h:'general-knowledge-dcg.html'},

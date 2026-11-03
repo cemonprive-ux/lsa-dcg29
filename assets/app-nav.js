@@ -7,7 +7,7 @@ var standalone=(window.matchMedia&&matchMedia("(display-mode: standalone)").matc
 
 /* Page parente explicite (sinon : accueil) */
 var H={"general-knowledge-dcg.html":"General Knowledge"};
-var P={"brexit.html":"general-knowledge-dcg.html","financial-crises.html":"general-knowledge-dcg.html"};
+var P={"brexit.html":"general-knowledge-dcg.html","financial-crises.html":"general-knowledge-dcg.html","midterms-2026.html":"general-knowledge-dcg.html"};
 
 /* Accueil : mémoriser / restaurer les rubriques ouvertes */
 function indexState(){
